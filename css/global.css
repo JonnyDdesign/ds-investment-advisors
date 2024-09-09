@@ -46,12 +46,13 @@ html {
 
 h1 {
     font-family: 'Marcellus SC', serif;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     text-align: center;
     margin: 20px 0;
 }
 
 h2 {
+    font-family: 'Jacques Francois', serif;
     font-size: 3rem;
     text-align: center;
     color: #D4AF37;
@@ -70,13 +71,14 @@ p {
     justify-content: center;
     text-align: center;
     background-color: #D4AF37;
-    max-width: 1600px;
+    max-width: 1300px;
     margin: 20px auto;
     border-radius: 30px 30px 60px 60px;
 }
 
 .nav ul {
     display: flex;
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;

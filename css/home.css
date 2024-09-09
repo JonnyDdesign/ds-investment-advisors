@@ -3,8 +3,7 @@
 }
 
 #section0 p {
-    text-align: center;
-    padding: 20px 60px;
+    padding: 20px 160px;
 }
 
 .contact-button {
@@ -17,7 +16,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -29,13 +28,19 @@
     color: #000000;
 }
 
+.main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .main p {
     font-family: 'Caprasimo', serif;
     font-size: 3rem;
     text-align: left;
     color: #000000;
     position: absolute;
-    left: 320px;
+    left: 22%;
 }
 
 .main img {
@@ -43,19 +48,25 @@
     margin: 0 auto;
     width: 60%;
     height: auto;
+    border-radius: 5px;
 }
 
 #section1 {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1600px;
+    margin: 40px auto;
+}
+
+#section1 p {
+    margin: 40px;
+    padding: 0 80px;
 }
 
 /* Grid container for the service cards */
 #section1 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 
 #section1 .services-container .service-card-1,
@@ -66,26 +77,32 @@
     color: #000000;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+#section1 h3 {
+    font-family: 'Jacques Francois', serif;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
 #section1 img {
-    max-width: 50%;
-    margin-bottom: 15px;
+    max-width: 40%;
+    margin: 20px;
     border-radius: 50%;
 }
 
-.services-p {
-    font-size: 1rem;
+#section1 .services-p {
+    font-size: 1.8rem;
     line-height: 1.5;
+    padding: 0;
 }
 
 #section2 p {
-    padding: 10px 100px;
+    padding: 10px 150px;
     text-align: left;
 }
 
@@ -97,6 +114,10 @@
     border-radius: 10px;
 }
 
+#section3 {
+    margin: 40px 0 50px 0;
+}
+
 #section3 img {
     display: block;
     margin: 30px auto;
@@ -106,7 +127,7 @@
 }
 
 #section3 p {
-    padding: 10px 100px;
+    padding: 10px 150px;
     text-align: left;
 }
 
