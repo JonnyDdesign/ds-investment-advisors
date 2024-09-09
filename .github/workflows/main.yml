@@ -9,12 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
       - name: Check server reachability using nc (Netcat)
         run: |
           nc -zv 149.100.151.13 65002 || echo "Server unreachable, but continuing..."
-
-      - name: Checkout code
-        uses: actions/checkout@v3
 
       - name: Create .ssh directory and add SSH host key
         run: |
