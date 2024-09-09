@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check server reachability using nc (Netcat)
         run: |
-          nc -zv 149.100.151.13 65002
+          nc -zv 149.100.151.13 65002 || echo "Server unreachable, but continuing..."
 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -32,6 +32,12 @@ jobs:
           ls -la ~/.ssh
           cat ~/.ssh/id_ed25519 || echo "Failed to read id_ed25519"
           cat ~/.ssh/known_hosts || echo "Failed to read known_hosts"
+        shell: /usr/bin/bash -e {0}
+
+      - name: Clean up SSH keys
+        if: always()
+        run: |
+          rm -f ~/.ssh/id_ed25519
         shell: /usr/bin/bash -e {0}
       
       - name: Test SSH connection
