@@ -3,7 +3,6 @@
 }
 
 #section0 p {
-    font-size: 2rem;
     text-align: center;
     padding: 20px 60px;
 }
@@ -33,7 +32,7 @@
 .main p {
     font-family: 'Caprasimo', serif;
     font-size: 3rem;
-    line-height: 1.5;
+    text-align: left;
     color: #000000;
     position: absolute;
     left: 320px;
@@ -50,17 +49,6 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-#section1 h2 {
-    margin-bottom: 10px;
-}
-
-#section1 p {
-    text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    line-height: 1.5;
 }
 
 /* Grid container for the service cards */
@@ -94,4 +82,17 @@
 .services-p {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+#section2 p {
+    padding: 10px 100px;
+    text-align: left;
+}
+
+#section2 img {
+    display: block;
+    margin: 30px auto;
+    max-width: 50%;
+    border: 3px solid #D4AF37;
+    border-radius: 10px;
 }
