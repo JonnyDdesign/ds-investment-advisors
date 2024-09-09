@@ -8,11 +8,33 @@
     padding: 20px 60px;
 }
 
+.contact-button {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px auto 40px auto;
+    width: fit-content;
+    background-color: #D4AF37;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 .main p {
     font-size: 1.8rem;
     color: #000000;
     position: absolute;
-    left: 80px;
+    left: 320px;
 }
 
 .main img {
