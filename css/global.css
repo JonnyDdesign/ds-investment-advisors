@@ -35,6 +35,15 @@ html {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Caprasimo';
+    src: url('/assets/fonts/Caprasimo-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Caprasimo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1 {
     font-family: 'Marcellus SC', serif;
     font-size: 4.5rem;
