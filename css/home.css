@@ -1,3 +1,9 @@
 .and {
     color: #D4AF37;
 }
+
+#section0 p {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 60px;
+}
