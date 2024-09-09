@@ -45,3 +45,53 @@
     width: 60%;
     height: auto;
 }
+
+#section1 {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#section1 h2 {
+    margin-bottom: 10px;
+}
+
+#section1 p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Grid container for the service cards */
+#section1 .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#section1 .services-container .service-card-1,
+#section1 .services-container .service-card-2,
+#section1 .services-container .service-card-3,
+#section1 .services-container .service-card-4 {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#section1 img {
+    max-width: 50%;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.services-p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
