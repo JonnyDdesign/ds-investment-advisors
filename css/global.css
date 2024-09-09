@@ -16,7 +16,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Locally hosted fonts */
+@font-face {
+    font-family: 'Marcellus SC';
+    src: url('/assets/fonts/MarcellusSC-Regular.woff2') format('woff2'),
+         url('/assets/fonts/MarcellusSC-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1 {
+    font-family: 'Marcellus SC', serif;
     font-size: 3.5rem;
     text-align: center;
 }
