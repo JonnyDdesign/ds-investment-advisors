@@ -18,23 +18,23 @@ jobs:
           echo "149.100.151.13 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhgZJSTvfoiUUxq+06BdvqpzAGyx/3eUCaTIQLgBKFZ jondesserres@gmail.com" >> ~/.ssh/known_hosts
         shell: /usr/bin/bash -e {0}
 
-      - name: Set up SSH
+      - name: Set up SSH private key
         run: |
-          set -x
-          mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          # Debugging
+          echo "Private key successfully written"
+
+      - name: Start SSH agent and add key
+        run: |
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/id_ed25519
+          echo "SSH key added to agent."
+
+      - name: Debugging - Verify SSH setup
+        run: |
           ls -la ~/.ssh
           cat ~/.ssh/id_ed25519 || echo "Failed to read id_ed25519"
           cat ~/.ssh/known_hosts || echo "Failed to read known_hosts"
-        shell: /usr/bin/bash -e {0}
-
-      - name: Clean up SSH keys
-        if: always()
-        run: |
-          rm -f ~/.ssh/id_ed25519
-        shell: /usr/bin/bash -e {0}
       
       - name: Test SSH connection
         run: |
@@ -43,3 +43,9 @@ jobs:
       - name: Deploy to Hostinger
         run: |
           ssh -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 "cd /home/u522518288/domains/dandsinvestment.com/public_html && git pull origin master"
+
+      - name: Clean up SSH keys
+        if: always()
+        run: |
+          rm -f ~/.ssh/id_ed25519
+        shell: /usr/bin/bash -e {0}
