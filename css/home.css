@@ -196,6 +196,6 @@ button[type="submit"]:hover {
 /* Responsive styles */
 @media (max-width: 900px) {
     #section1 {
-        max-width: 900px;
+        max-width: 800px;
     }
 }
