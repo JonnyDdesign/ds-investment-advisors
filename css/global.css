@@ -198,6 +198,11 @@ footer {
     .nav a {
         font-size: 1.3rem;
     }
+
+    .footer p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
 }
 
 @media (max-width: 700px) {
@@ -221,7 +226,56 @@ footer {
         gap: 10px;
     }
 
+    .nav li {
+        margin: 0 15px;
+        padding: 5px 0;
+    }
+
     .nav a {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        max-width: 450px;
+    }
+
+    .nav ul {
+        gap: 5px;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    .footer .fa {
+        font-size: 28px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .nav {
+        max-width: 350px;
+    }
+
+    .nav ul {
+        gap: 5px;
+    }
+
+    .nav a {
+        font-size: 0.7rem;
     }
 }

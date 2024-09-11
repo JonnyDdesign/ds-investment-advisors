@@ -311,6 +311,7 @@ button[type="submit"]:hover {
 
     #section1 {
         max-width: 650px;
+        padding: 10px;
     }
 
     #section1 p {
@@ -339,18 +340,21 @@ button[type="submit"]:hover {
         padding: 10px 100px;
     }
 
+    #section2 img {
+        border: 1px solid #D4AF37;
+    }
+
     #section3 p {
         padding: 10px 100px;
+    }
+
+    #section3 img {
+        border: 1px solid #D4AF37;
     }
 
     form {
         gap: 15px;
         max-width: 500px;
-    }
-
-    .footer p {
-        font-size: 1rem;
-        margin: 5px 0;
     }
 }
 
@@ -370,6 +374,10 @@ button[type="submit"]:hover {
 
     #section1 {
         max-width: 500px;
+    }
+
+    #section1 h3 {
+        font-size: 1.6rem;
     }
 
     #section1 img {
@@ -397,5 +405,63 @@ button[type="submit"]:hover {
     button[type="submit"] {
         padding: 10px 25px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact-button {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin: 10px auto 30px auto;
+    }
+
+    #section0 p {
+        margin: 10px 0;
+    }
+
+    .main p {
+        font-size: 1.5rem;
+        left: 17%;
+        margin: 10px 0;
+    }
+
+    #section1 {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    #section1 h3 {
+        font-size: 1.3rem;
+    }
+
+    #section1 img {
+        max-width: 25%;
+        margin: 10px;
+    }
+
+    #section1 .services-p {
+        font-size: 1rem;
+    }
+
+    #section2 p {
+        padding: 10px 70px;
+    }
+
+    #section3 p {
+        padding: 10px 70px;
+    }
+
+    form {
+        gap: 15px;
+        max-width: 350px;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 20px;
     }
 }
