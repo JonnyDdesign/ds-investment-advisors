@@ -29,14 +29,19 @@ jobs:
           eval $(ssh-agent -s)
           ssh-add ~/.ssh/id_ed25519
           echo "SSH key added to agent."
+          ssh-add -l || echo "No SSH keys added."
 
       - name: Debugging - Verify SSH setup
         run: |
           ls -la ~/.ssh
           cat ~/.ssh/id_ed25519 || echo "Failed to read id_ed25519"
           cat ~/.ssh/known_hosts || echo "Failed to read known_hosts"
+
+      - name: Test SSH connection to GitHub
+        run: |
+          ssh -T git@github.com || echo "Failed to connect to GitHub"
       
-      - name: Test SSH connection
+      - name: Test SSH connection to Hostinger
         run: |
           ssh -vvv -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 'echo "SSH connection successful"'
 
