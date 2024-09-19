@@ -42,10 +42,15 @@ jobs:
 
       - name: Deploy to Hostinger
         run: |
-          ssh -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 "cd /home/u522518288/domains/dandsinvestment.com/public_html && git pull origin master"
+          ssh -p 65002 u522518288@149.100.151.13 "
+            cd /home/u522518288/domains/dandsinvestment.com/public_html &&
+            git stash || true &&
+            git pull origin master &&
+            git stash pop || true"
 
       - name: Clean up SSH keys
         if: always()
         run: |
           rm -f ~/.ssh/id_ed25519
+          rm -f ~/.ssh/known_hosts
         shell: /usr/bin/bash -e {0}
