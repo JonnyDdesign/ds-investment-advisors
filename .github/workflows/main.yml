@@ -28,6 +28,7 @@ jobs:
         run: |
           eval $(ssh-agent -s)
           ssh-add ~/.ssh/id_ed25519
+          export SSH_AUTH_SOCK=$SSH_AUTH_SOCK
           echo "SSH key added to agent."
           ssh-add -l || echo "No SSH keys added."
 
