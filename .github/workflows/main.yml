@@ -31,8 +31,9 @@ jobs:
           echo "SSH key added to agent."
           ssh-add -l || echo "No SSH keys added."
 
-      - name: List SSH keys
+      - name: Verify SSH key setup
         run: |
+          ls -la ~/.ssh
           ssh-add -l || echo "No keys in SSH agent."
 
       - name: Test SSH connection to GitHub
