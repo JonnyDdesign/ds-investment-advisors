@@ -45,8 +45,8 @@ jobs:
           ssh -p 65002 u522518288@149.100.151.13 "
             cd /home/u522518288/domains/dandsinvestment.com/public_html &&
             git stash || true &&
-            git pull origin master &&
-            git stash pop || true"
+            git pull origin master || { echo 'Failed to pull changes. Check for conflicts.'; exit 1; } &&
+            git stash pop || echo 'No stashed changes to pop.'"
 
       - name: Clean up SSH keys
         if: always()
