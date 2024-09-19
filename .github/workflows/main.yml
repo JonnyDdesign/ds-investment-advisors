@@ -31,11 +31,9 @@ jobs:
           echo "SSH key added to agent."
           ssh-add -l || echo "No SSH keys added."
 
-      - name: Debugging - Verify SSH setup
+      - name: List SSH keys
         run: |
-          ls -la ~/.ssh
-          cat ~/.ssh/id_ed25519 || echo "Failed to read id_ed25519"
-          cat ~/.ssh/known_hosts || echo "Failed to read known_hosts"
+          ssh-add -l || echo "No keys in SSH agent."
 
       - name: Test SSH connection to GitHub
         run: |
