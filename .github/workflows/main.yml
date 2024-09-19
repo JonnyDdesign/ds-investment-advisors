@@ -12,37 +12,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create .ssh directory, add SSH host key, set up SSH key, and deploy
+      - name: Set up SSH and deploy to Hostinger
         run: |
-          # Create .ssh directory and add Hostinger's known host key
+          # Create .ssh directory
           mkdir -p ~/.ssh
-          echo "149.100.151.13 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhgZJSTvfoiUUxq+06BdvqpzAGyx/3eUCaTIQLgBKFZ jondesserres@gmail.com" >> ~/.ssh/known_hosts
 
-          # Set up the SSH private key
+          # Add Hostinger's known host key
+          echo "149.100.151.13 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhgZJSTvfoiUUxq+06BdvqpzAGyx/3eUCaTIQLgBKFZ jondesserres@gmail.com" > ~/.ssh/known_hosts
+
+          # Set up SSH private key
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          echo "Private key successfully written"
 
-          # Start SSH agent and add key
-          eval $(ssh-agent -s)
+          # Start SSH agent and add the SSH private key
+          eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ed25519
-          echo "SSH key added to agent."
-          ssh-add -l || echo "No SSH keys added."
-
-          # Test SSH connection to GitHub
-          ssh -T git@github.com || echo "Failed to connect to GitHub"
 
           # Test SSH connection to Hostinger
-          ssh -vvv -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 'echo "SSH connection successful"'
+          ssh -vvv -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 "echo 'SSH connection successful'"
 
           # Deploy to Hostinger
           ssh -p 65002 u522518288@149.100.151.13 "
             cd /home/u522518288/domains/dandsinvestment.com/public_html &&
             git stash || true &&
-            git pull origin master || { echo 'Failed to pull changes. Check for conflicts.'; exit 1; } &&
+            git pull origin master &&
             git stash pop || echo 'No stashed changes to pop.'"
 
-      - name: Clean up SSH keys
+      - name: Clean up
         if: always()
         run: |
           rm -f ~/.ssh/id_ed25519
