@@ -34,9 +34,12 @@ jobs:
           # Deploy to Hostinger
           ssh -p 65002 u522518288@149.100.151.13 "
             cd /home/u522518288/domains/dandsinvestment.com/public_html &&
-            git stash || true &&
-            git pull origin master &&
-            git stash pop || echo 'No stashed changes to pop.'"
+            echo 'Current branch:' &&
+            git branch &&
+            git status &&
+            git pull origin master && 
+            echo 'Pull completed, current status:' &&
+            git status"
 
       - name: Clean up
         if: always()
