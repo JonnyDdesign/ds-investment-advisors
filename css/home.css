@@ -427,6 +427,11 @@ button[type="submit"]:hover {
         margin: 10px 0;
     }
 
+    .main img {
+        width: 450px;
+        height: 694px;
+    }
+
     .main p {
         font-size: 1.5rem;
         left: 17%;
