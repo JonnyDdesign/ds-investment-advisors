@@ -197,7 +197,7 @@ button[type="submit"]:hover {
     }
 
     #section1 {
-        max-width: 1450px;
+        margin: 8%;
     }
 
     #section1 .services-container {
@@ -241,10 +241,6 @@ button[type="submit"]:hover {
 
     .main p {
         left: 15%;
-    }
-
-    #section1 {
-        max-width: 1000px;
     }
 
     #section1 p {
@@ -325,8 +321,8 @@ button[type="submit"]:hover {
     }
 
     #section1 {
-        max-width: 650px;
         padding: 10px;
+        margin: 10%;
     }
 
     #section1 p {
@@ -388,10 +384,6 @@ button[type="submit"]:hover {
         height: 809px;
     }
 
-    #section1 {
-        max-width: 500px;
-    }
-
     #section1 h3 {
         font-size: 1.6rem;
     }
@@ -439,11 +431,6 @@ button[type="submit"]:hover {
         font-size: 1.5rem;
         left: 17%;
         margin: 10px 0;
-    }
-
-    #section1 {
-        max-width: 400px;
-        margin: 20px auto;
     }
 
     #section1 h3 {
