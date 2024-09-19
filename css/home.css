@@ -42,15 +42,14 @@
 .main img {
     display: block;
     margin: 0 auto;
-    width: 60%;
-    height: auto;
+    width: 1250px;
+    height: 1927px;
     border-radius: 5px;
 }
 
 #section1 {
     padding: 20px;
-    max-width: 1800px;
-    margin: 40px auto;
+    margin: 40px;
 }
 
 #section1 p {
@@ -192,6 +191,11 @@ button[type="submit"]:hover {
 
 /* Responsive styles */
 @media (max-width: 1800px) {
+    .main img {
+        width: 1100px;
+        height: 1695px;
+    }
+
     #section1 {
         max-width: 1450px;
     }
@@ -216,6 +220,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 1500px) {
+    .main img {
+        width: 950px;
+        height: 1464px;
+    }
+
     #section1 {
         max-width: 1200px;
     }
@@ -232,10 +241,6 @@ button[type="submit"]:hover {
 
     .main p {
         left: 15%;
-    }
-
-    .main img {
-        width: 80%;
     }
 
     #section1 {
@@ -266,6 +271,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 1050px) {
+    .main img {
+        width: 750px;
+        height: 1156px;
+    }
+
     #section0 p {
         padding: 20px 90px;
     }
@@ -296,6 +306,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 850px) {
+    .main img {
+        width: 650px;
+        height: 1002px;
+    }
+
     #section0 p {
         padding: 20px 60px;
     }
@@ -369,7 +384,8 @@ button[type="submit"]:hover {
     }
 
     .main img {
-        width: 70%;
+        width: 525px;
+        height: 809px;
     }
 
     #section1 {
