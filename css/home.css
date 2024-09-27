@@ -1,5 +1,5 @@
 #section0 p {
-    font-size: 2rem;
+    font-size: clamp(2rem, 2vw, 3rem);
     padding: 40px 350px;
     line-height: 1.7;
 }
@@ -28,8 +28,8 @@
 
 .image-container {
     position: relative;
-    width: 1400px;
-    height: 2158px;
+    width: 1300px;
+    height: 2050px;
     margin: 0 auto;
 }
 
@@ -218,11 +218,6 @@ button[type="submit"]:hover {
 
 /* Responsive styles */
 @media (max-width: 1800px) {
-    .main img {
-        width: 1100px;
-        height: 1695px;
-    }
-
     #section1 {
         margin: 8%;
     }
