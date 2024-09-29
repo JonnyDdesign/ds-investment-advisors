@@ -152,6 +152,12 @@
     letter-spacing: 2px;
 }
 
+#section4 img {
+    width: 50%;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -220,6 +226,12 @@ button[type="submit"]:hover {
     #section1 .services-p {
         font-size: 1.8rem;
         margin: 20px;
+    }
+}
+
+@media (max-width: 1570px) {
+    #section0 p {
+        padding: 40px 250px;
     }
 }
 
