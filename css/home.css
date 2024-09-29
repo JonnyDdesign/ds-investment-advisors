@@ -110,6 +110,10 @@
     margin: 10px;
 }
 
+#section2 {
+    padding: 50px 20px;
+}
+
 #section2 p {
     padding: 10px 150px;
     text-align: left;
@@ -124,7 +128,7 @@
 }
 
 #section3 {
-    margin: 40px 0 50px 0;
+    padding: 50px 20px;
 }
 
 #section3 img {
@@ -158,13 +162,17 @@
     border-radius: 10px;
 }
 
+#section5 {
+    padding: 50px 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 10px;
