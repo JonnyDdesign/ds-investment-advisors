@@ -253,7 +253,12 @@ button[type="submit"]:hover {
 
     .overlay-text {
         top: 17%;
-        font-size: 4.5rem;
+        font-size: 4rem;
+    }
+
+    #section1 {
+        padding: 20px;
+        margin: 40px 70px;
     }
 }
 
@@ -268,8 +273,9 @@ button[type="submit"]:hover {
         padding: 20px 100px;
     }
 
-    .main p {
-        left: 15%;
+    .image-container {
+        width: 900px;
+        height: 1495px;
     }
 
     #section1 p {
