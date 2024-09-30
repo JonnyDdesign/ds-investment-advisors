@@ -1,5 +1,5 @@
 #section0 p {
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: clamp(2rem, 1.5vw, 3rem);
     padding: 40px 350px;
     line-height: 1.7;
 }
@@ -98,7 +98,7 @@
 }
 
 #section1 img {
-    max-width: 30%;
+    max-width: 25%;
     margin: 20px;
     border-radius: 50%;
 }
@@ -111,7 +111,7 @@
 }
 
 #section2 {
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 #section2 p {
@@ -128,7 +128,7 @@
 }
 
 #section3 {
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 #section3 img {
@@ -222,10 +222,6 @@ button[type="submit"]:hover {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 80px;
     }
-
-    #section1 h3 {
-        font-size: 2.5rem;
-    }
     
     #section1 img {
         margin: 20px;
@@ -258,6 +254,12 @@ button[type="submit"]:hover {
     .overlay-text {
         top: 17%;
         font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1370px) {
+    #section0 p {
+        padding: 20px 150px;
     }
 }
 
