@@ -324,6 +324,16 @@ button[type="submit"]:hover {
         padding: 20px 60px;
     }
 
+    .image-container {
+        width: 700px;
+        height: 1079px;
+    }
+
+    .overlay-text {
+        top: 18%;
+        font-size: 3rem;
+    }
+
     .contact-button {
         font-size: 20px;
     }
