@@ -1,6 +1,6 @@
 #section0 p {
-    font-size: clamp(2rem, 1.5vw, 3rem);
-    padding: 40px 350px;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    padding: 40px 250px;
     line-height: 1.7;
 }
 
@@ -253,7 +253,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 1570px) {
     #section0 p {
-        padding: 40px 250px;
+        padding: 40px 200px;
     }
 }
 
@@ -288,7 +288,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 1300px) {
     #section0 p {
-        padding: 20px 100px;
+        padding: 20px 80px;
     }
 
     .image-container {
@@ -320,13 +320,8 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 1050px) {
-    .main img {
-        width: 750px;
-        height: 1156px;
-    }
-
     #section0 p {
-        padding: 20px 90px;
+        padding: 20px 60px;
     }
 
     .contact-button {
