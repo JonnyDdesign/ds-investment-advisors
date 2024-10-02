@@ -1,0 +1,4 @@
+main p {
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: 20px 200px;
+}
