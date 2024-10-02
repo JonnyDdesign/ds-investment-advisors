@@ -11,7 +11,7 @@ main p {
 .cards-section {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 100px;
 }
 
 .card {
@@ -32,7 +32,11 @@ main p {
     margin-bottom: 15px;
 }
 
-h3 {
-    font-size: 1.5em;
+.card h3 {
+    font-size: clamp(2rem, 3vw, 3rem);
     margin: 10px 0;
+}
+
+.card p {
+    text-align: left;
 }
