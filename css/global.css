@@ -57,6 +57,7 @@ h2 {
     text-align: center;
     color: #D4AF37;
     text-decoration: underline;
+    text-transform: uppercase;
     margin-bottom: 30px;
 }
 
@@ -73,6 +74,11 @@ p {
 
 .and {
     color: #D4AF37;
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav {
