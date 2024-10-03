@@ -74,31 +74,27 @@
 #section1 .services-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 
 .service-card-link {
     text-decoration: none;
     color: inherit;
 }
-
-.service-card-1 {
-    transition: transform 0.3s ease;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
   
-  .service-card-1:hover {
+  .service-card-1:hover,
+  .service-card-2:hover,
+  .service-card-3:hover,
+  .service-card-4:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #section1 .services-container .service-card-1,
 #section1 .services-container .service-card-2,
 #section1 .services-container .service-card-3,
 #section1 .services-container .service-card-4 {
+    width: 100%;
+    height: 700px;
     background-color: #FFFFFF;
     color: #000000;
     padding: 20px;
@@ -107,6 +103,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 #section1 h3 {
