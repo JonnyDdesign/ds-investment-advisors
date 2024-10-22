@@ -1,0 +1,10 @@
+main h2 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding-top: 80px;
+}
+
+main p {
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: 20px 200px;
+    text-align: left;
+}
