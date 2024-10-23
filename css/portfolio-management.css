@@ -4,7 +4,6 @@ main h2 {
 }
 
 main p {
-    font-size: clamp(1rem, 2vw, 3rem);
     padding: 20px 200px;
 }
 
@@ -22,10 +21,6 @@ main p {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
 .icon img {
     width: 150px;
     height: 150px;
@@ -33,10 +28,22 @@ main p {
 }
 
 .card h3 {
-    font-size: clamp(2rem, 3vw, 3rem);
     margin: 10px 0;
 }
 
 .card p {
     text-align: left;
+}
+
+/* Responsive styles */
+@media (max-width: 1300px) {
+    .cards-section {
+        padding: 50px;
+    }
+
+    .icon img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
 }
