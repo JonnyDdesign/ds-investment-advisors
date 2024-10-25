@@ -128,12 +128,12 @@ p {
     padding: 10px;
 }
 
-.services-dropdown {
+.nav .services-dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: green;
+    background-color: #D4AF37;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -150,7 +150,6 @@ p {
     padding: 10px;
     display: block;
     color: blue;
-    background-color: yellow;
     text-decoration: none;
 }
 
