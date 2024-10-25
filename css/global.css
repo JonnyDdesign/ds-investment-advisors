@@ -142,14 +142,10 @@ p {
     z-index: 10;
 }
 
-.services-dropdown li {
-    width: 100%;
-}
-
-.services-dropdown li a {
+.nav .services-dropdown li a {
+    font-size: clamp(1rem, 1.5vw, 2rem);
     padding: 10px;
     display: block;
-    color: blue;
     text-decoration: none;
 }
 
