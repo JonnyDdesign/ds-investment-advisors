@@ -4,6 +4,7 @@ main h2 {
 }
 
 main p {
+    text-align: left;
     padding: 20px 200px;
 }
 
