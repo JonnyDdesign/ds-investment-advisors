@@ -14,11 +14,17 @@ jobs:
 
       - name: Set up SSH and deploy to Hostinger
         run: |
+          # Set variables
+          SSH_HOST=145.223.106.133
+          SSH_PORT=65002
+          SSH_USER=u522518288
+          SSH_DIR=/home/u522518288/domains/dandsinvestment.com/public_html
+
           # Create .ssh directory
           mkdir -p ~/.ssh
 
           # Add Hostinger's known host key
-          echo "149.100.151.13 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhgZJSTvfoiUUxq+06BdvqpzAGyx/3eUCaTIQLgBKFZ jondesserres@gmail.com" > ~/.ssh/known_hosts
+          echo "$SSH_HOST ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhgZJSTvfoiUUxq+06BdvqpzAGyx/3eUCaTIQLgBKFZ jondesserres@gmail.com" > ~/.ssh/known_hosts
 
           # Set up SSH private key
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
@@ -29,17 +35,18 @@ jobs:
           ssh-add ~/.ssh/id_ed25519
 
           # Test SSH connection to Hostinger
-          ssh -vvv -o StrictHostKeyChecking=no -p 65002 u522518288@149.100.151.13 "echo 'SSH connection successful'"
+          ssh -vvv -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "echo 'SSH connection successful'"
 
           # Deploy to Hostinger
-          ssh -p 65002 u522518288@149.100.151.13 "
-            cd /home/u522518288/domains/dandsinvestment.com/public_html &&
+          ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "
+            cd $SSH_DIR &&
             echo 'Current branch:' &&
             git branch &&
             git status &&
-            git pull origin master && 
+            git pull origin master &&
             echo 'Pull completed, current status:' &&
-            git status"
+            git status
+          "
 
       - name: Clean up
         if: always()
