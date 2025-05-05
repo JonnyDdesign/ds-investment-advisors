@@ -216,11 +216,15 @@ footer {
     }
 
     .nav a {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width: 850px) {
+    .nav li {
+        margin: 0 15px;
+    }
+
     h1 {
         font-size: 3.8rem;
     }
@@ -301,8 +305,8 @@ footer {
         max-width: 350px;
     }
 
-    .nav ul {
-        gap: 5px;
+    .nav li {
+        margin: 0 5px;
     }
 
     .nav a {
