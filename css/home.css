@@ -330,10 +330,6 @@ button[type="submit"]:hover {
         font-size: 3rem;
     }
 
-    .contact-button {
-        font-size: 20px;
-    }
-
     #section1 {
         margin: 0;
     }
@@ -363,10 +359,6 @@ button[type="submit"]:hover {
 
     #section0 p {
         padding: 20px 60px;
-    }
-
-    .contact-button {
-        font-size: 18px;
     }
 
     .main p {
@@ -431,10 +423,6 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 700px) {
-    .contact-button {
-        font-size: 16px;
-    }
-
     .main p {
         font-size: 2rem;
         left: 17%;
@@ -478,12 +466,6 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 550px) {
-    .contact-button {
-        font-size: 14px;
-        padding: 5px 10px;
-        margin: 10px auto 30px auto;
-    }
-
     #section0 p {
         margin: 10px 0;
     }
@@ -532,5 +514,36 @@ button[type="submit"]:hover {
 
     button[type="submit"] {
         padding: 8px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    #section0 p {
+        padding: 0;
+        margin: 30px;
+        font-size: 1.2rem;
+    }
+
+    .cta-anchor {
+        margin: 30px auto;
+        font-size: 1.1rem;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .main img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .overlay-text {
+        top: 20%;
+        left: 10px;
+        font-size: 2.6rem;
+        width: 0;
+        line-height: 1.3;
     }
 }
