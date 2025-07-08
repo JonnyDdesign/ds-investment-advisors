@@ -516,7 +516,7 @@ button[type="submit"]:hover {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     #section0 p {
         padding: 0;
         margin: 30px;
@@ -525,7 +525,7 @@ button[type="submit"]:hover {
 
     .cta-anchor {
         margin: 30px auto;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .image-container {

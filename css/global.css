@@ -252,7 +252,7 @@ footer {
     }
 
     .nav {
-        max-width: 550px;
+        max-width: 580px;
     }
 
     .nav ul {
@@ -279,7 +279,7 @@ footer {
     }
 
     .nav {
-        max-width: 450px;
+        max-width: 480px;
     }
 
     .nav ul {
@@ -287,7 +287,7 @@ footer {
     }
 
     .nav a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .footer .fa {
@@ -301,15 +301,11 @@ footer {
 
 @media (max-width: 450px) {
     .nav {
-        max-width: 350px;
+        max-width: 380px;
     }
 
     .nav li {
         margin: 0 5px;
-    }
-
-    .nav a {
-        font-size: 0.7rem;
     }
 
     .nav .services-dropdown {
