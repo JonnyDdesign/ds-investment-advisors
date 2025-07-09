@@ -28,6 +28,7 @@ main p {
 
 .card h3 {
     margin: 10px 0;
+    text-decoration: underline;
 }
 
 .card p {
@@ -64,24 +65,15 @@ main p {
     }
 
     .card h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .card p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 
-@media (max-width: 425px) {
-    main h2 {
-        font-size: 1.8rem;
-    }
-
-    main p {
-        padding: 10px 50px;
-        font-size: 1.2rem;
-    }
-
+@media (max-width: 645px) {
     .cards-section {
         flex-direction: column;
         align-items: center;
@@ -96,5 +88,16 @@ main p {
         justify-content: center;
         align-items: center;
         height: 100px; /* or adjust as needed */
+    }
+}
+
+@media (max-width: 435px) {
+    main h2 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        padding: 10px 50px;
+        font-size: 1.2rem;
     }
 }
