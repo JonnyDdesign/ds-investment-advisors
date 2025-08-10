@@ -87,7 +87,7 @@ p {
     justify-content: center;
     text-align: center;
     background-color: #D4AF37;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 20px auto;
     border-radius: 30px 30px 60px 60px;
 }
@@ -109,7 +109,7 @@ p {
 .nav a {
     font-family: 'Jacques Francois', serif;
     text-decoration: none;
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: 3rem;
     color: #000000;
     display: block;
     padding: 10px;
