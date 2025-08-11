@@ -14,7 +14,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -81,13 +81,6 @@
 .service-card-link {
     text-decoration: none;
     color: inherit;
-}
-  
-.service-card-1:hover,
-.service-card-2:hover,
-.service-card-3:hover,
-.service-card-4:hover {
-    transform: scale(1.05);
 }
 
 #section1 .services-container .service-card-1,
@@ -268,6 +261,10 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 1440px) {
+    .cta-anchor {
+        font-size: 1.8rem;
+    }
+
     .overlay-text {
         top: 17%;
         font-size: 4rem;
@@ -318,7 +315,12 @@ button[type="submit"]:hover {
 
 @media (max-width: 1050px) {
     #section0 p {
+        font-size: 1.8rem;
         padding: 20px 60px;
+    }
+
+    .cta-anchor {
+        font-size: 1.4rem;
     }
 
     .overlay-text {
@@ -348,13 +350,18 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 850px) {
+    .cta-anchor {
+        font-size: 1.2rem;
+    }
+
     .main img {
         width: 650px;
         height: 1002px;
     }
 
     #section0 p {
-        padding: 20px 60px;
+        font-size: 1.5rem;
+        padding: 20px 40px;
     }
 
     .main p {
@@ -466,9 +473,14 @@ button[type="submit"]:hover {
         margin: 10px 0;
     }
 
+    .main {
+        padding: 0;
+    }
+
     .main img {
         width: 450px;
         height: 694px;
+        border-radius: 0;
     }
 
     .main p {
@@ -514,6 +526,10 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 435px) {
+    h1 {
+        font-size: 2rem;
+    }
+
     #section0 p {
         padding: 0;
         margin: 30px;
@@ -527,13 +543,12 @@ button[type="submit"]:hover {
 
     .main img {
         width: 100%;
-        border-radius: 0;
     }
 
     .overlay-text {
-        top: 20%;
+        top: 18%;
         left: 20px;
-        font-size: 2.6rem;
+        font-size: 2.4rem;
         width: 0;
         line-height: 1.3;
     }
@@ -571,7 +586,7 @@ button[type="submit"]:hover {
     }
 
     #section3 {
-        padding: 10px;
+        padding: 10px 10px 30px 10px;
     }
 
     #section3 img {
@@ -584,7 +599,7 @@ button[type="submit"]:hover {
     }
 
     #section4 h2 {
-        padding: 20px;
+        padding: 30px;
         margin-bottom: 0;
     }
 
@@ -593,5 +608,16 @@ button[type="submit"]:hover {
         border: none;
         border-radius: 0;
         margin-bottom: 20px;
+    }
+}
+
+/* Hover media queries */
+@media (min-width: 1024px) {
+    .service-card-1:hover,
+    .service-card-2:hover,
+    .service-card-3:hover,
+    .service-card-4:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
     }
 }
